@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20/11</title>
+    <title>women's day</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css"
         integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -661,28 +661,6 @@
 }
 
     </style>
-    <style>
-    /* BACKGROUND FLOWERS */
-.flower {
-    position: fixed;
-    pointer-events: none;
-    opacity: 0.75;
-    z-index: 0; /* đảm bảo dưới phong bì và trái tim */
-    user-select: none;
-}
-
-@keyframes fallDown {
-    from { transform: translateY(-15vh) rotate(0deg); }
-    to   { transform: translateY(110vh) rotate(360deg); }
-}
-
-@keyframes fallUp {
-    from { transform: translateY(110vh) rotate(0deg); }
-    to   { transform: translateY(-15vh) rotate(-360deg); }
-}
-
-</style>
-
 </head>
 
 <body>
@@ -1265,57 +1243,6 @@
         });
 
     </script>
-
-
-     ️<!-- Hoa rơi -->
-<script>
-    const flowerImgs = [
-        href="hoa-removebg-preview.png",
-        href="hoa-removebg-preview.png",
-        href="hoa-removebg-preview.png",
-        href="hoa-removebg-preview.png",
-        href="hoa-removebg-preview.png",
-        href="hoa-removebg-preview.png",
-        href="hoa-removebg-preview.png",
-    ];
-
-    function createFlower(fromTop = true) {
-        const f = document.createElement("img");
-        f.classList.add("flower");
-        f.src = flowerImgs[Math.floor(Math.random() * flowerImgs.length)];
-
-        // Kích thước ngẫu nhiên
-        const size = Math.random() * 25 + 25;
-        f.style.width = size + "px";
-
-        // Vị trí ngang
-        f.style.left = Math.random() * 100 + "vw";
-
-        // Nếu từ trên xuống
-        if (fromTop) {
-            f.style.top = "-15vh";
-            f.style.animation = `fallDown ${4 + Math.random() * 3}s linear`;
-        }
-        // Nếu từ dưới lên
-        else {
-            f.style.top = "110vh";
-            f.style.animation = `fallUp ${4 + Math.random() * 3}s linear`;
-        }
-
-        document.body.appendChild(f);
-
-        // Tự xoá sau 7 giây để tránh lag
-        setTimeout(() => f.remove(), 7000);
-    }
-
-    // Hoa bắt đầu sau 3 giây
-    setTimeout(() => {
-        setInterval(() => createFlower(true), 650);  // từ trên xuống
-        setInterval(() => createFlower(false), 650); // từ dưới lên
-    }, 3000);
-</script>
-
 </body>
 
 </html>
-
